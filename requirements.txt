@@ -1,1 +1,2 @@
 fastai==2.7.14
+streamlit-image-select==0.6.0
