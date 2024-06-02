@@ -40,15 +40,18 @@ def predict_grid(data):
 ## App
 st.set_page_config("SCR Prediction", ":material/power:")
 st.title("Power Grid Classifier! 📈")
-bytes_data = None
+st.write("Predict the Short Circuit Ratio (SCR) of a Power Grid based on its Impedance Spectrum Image.")
+st.info("This is a demo for academic purposes only", icon="⚠")
+st.divider()
 
-uploaded_image = st.file_uploader("Input a Power Grid spectrum:")
+bytes_data = None
+uploaded_image = st.file_uploader("Upload a new Grid spectrum:")
 if uploaded_image:
     bytes_data = uploaded_image.getvalue()
     st.image(bytes_data, caption="Uploaded image")   
 
 test_image = image_select(
-    label="or select a test spectrum from the gallery",
+    label="or select a test image from the gallery",
     images=[
         Image.open("data/SCR=4_XRR=3_SpP=30%_SpQ=0%.png"),
         Image.open("data/SCR=7_XRR=3_SpP=30%_SpQ=0%.png"),
