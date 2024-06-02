@@ -38,6 +38,7 @@ def predict_grid(data):
 
 
 ## App
+st.set_page_config("SCR Prediction", ":material/power:")
 st.title("Power Grid Classifier! 📈")
 bytes_data = None
 
