@@ -65,7 +65,7 @@ test_image = image_select(
     captions=["SCR=4", "SCR=7", "SCR=12", "SCR=16", "SCR=30", "SCR=40", "SCR=60", "SCR=80"],
     use_container_width=False,
 )
-if test_image:
+if uploaded_image is None:
     bytes_data = test_image
 
 if bytes_data:
